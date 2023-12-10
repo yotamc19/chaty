@@ -1,9 +1,9 @@
-import { StartChatButton } from "./components/StartChatButton";
+import { EndChatButton } from "./components/EndChatButton";
 
 export function ChatPage() {
     return (
-        <div>
-            <StartChatButton />
+        <div style={{ height: 100, width: 100}}>
+            <EndChatButton />
         </div>
     );
 }

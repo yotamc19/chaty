@@ -1,14 +1,17 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { ChatPage } from './pages/chatPage/ChatPage';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { LandingPage } from "./pages/landingPage/LandingPage";
+import { ChatPage } from "./pages/chatPage/ChatPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <ChatPage />
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index path="/" component={<LandingPage />} />
+        <Route path="/chat" component={<ChatPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
